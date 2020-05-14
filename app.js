@@ -6,7 +6,7 @@
 
 // document.cookie;
 
-const getCookiesAsObject = () => {
+function getCookiesAsObject() {
   let cookieArray = document.cookie.split("; ");
   //   console.log(cookieArray);
 
@@ -16,7 +16,7 @@ const getCookiesAsObject = () => {
     cookiesObj[cookieData[0]] = cookieData[1];
   });
   return cookiesObj;
-};
+}
 //aici pun in cookiesObj tot ce este in functia getCookiesAsObject()
 const cookiesObj = getCookiesAsObject();
 // console.log(cookiesObj.language);
@@ -37,22 +37,22 @@ for (let i = 0; i < radioBtns.length; i++) {
 
 //Local Storage
 
-function local() {
-  const en = document.getElementById("en");
-  //   console.log(en);
-  const ro = document.getElementById("ro");
-  //   console.log(ro);
+// function local() {
+//   const en = document.getElementById("en");
+//   //   console.log(en);
+//   const ro = document.getElementById("ro");
+//   //   console.log(ro);
 
-  en.addEventListener("click", () => {
-    localStorage.setItem("lang", "en-Us");
-  });
-  ro.addEventListener("click", () => {
-    localStorage.setItem("lang", "ro-RO");
-  });
-  if (ro.value == localStorage.getItem("lang")) {
-    ro.checked = "checked";
-  } else if (en.value == localStorage.getItem("lang")) {
-    en.checked = "checked";
-  }
-}
-local();
+//   en.addEventListener("click", () => {
+//     localStorage.setItem("lang", "en-Us");
+//   });
+//   ro.addEventListener("click", () => {
+//     localStorage.setItem("lang", "ro-RO");
+//   });
+//   if (ro.value == localStorage.getItem("lang")) {
+//     ro.checked = "checked";
+//   } else if (en.value == localStorage.getItem("lang")) {
+//     en.checked = "checked";
+//   }
+// }
+// local();
